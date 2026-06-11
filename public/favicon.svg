@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A1A2E"/>
+      <stop offset="100%" stop-color="#0D2235"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5A0"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5A0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="url(#border)" stroke-width="1.5"/>
+
+  <!-- Microphone body -->
+  <rect x="26" y="10" width="12" height="22" rx="6" fill="url(#accent)" opacity="0.95"/>
+
+  <!-- Mic grille lines -->
+  <line x1="26" y1="18" x2="38" y2="18" stroke="#0A1A2E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="26" y1="22" x2="38" y2="22" stroke="#0A1A2E" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="26" y1="26" x2="38" y2="26" stroke="#0A1A2E" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Microphone arc -->
+  <path d="M18 29C18 37.84 24.27 45 32 45C39.73 45 46 37.84 46 29"
+    stroke="url(#accent)" stroke-width="3" stroke-linecap="round" fill="none"
+    filter="url(#glow)"/>
+
+  <!-- Stand line -->
+  <line x1="32" y1="45" x2="32" y2="53" stroke="url(#accent)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Stand base -->
+  <line x1="22" y1="53" x2="42" y2="53" stroke="url(#accent)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Sound wave left inner -->
+  <path d="M13 25C13 25 11 28 11 32C11 36 13 39 13 39"
+    stroke="url(#accent)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <!-- Sound wave left outer -->
+  <path d="M8 21C8 21 5 26 5 32C5 38 8 43 8 43"
+    stroke="url(#accent)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.3"/>
+
+  <!-- Sound wave right inner -->
+  <path d="M51 25C51 25 53 28 53 32C53 36 51 39 51 39"
+    stroke="url(#accent)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.65"/>
+
+  <!-- Sound wave right outer -->
+  <path d="M56 21C56 21 59 26 59 32C59 38 56 43 56 43"
+    stroke="url(#accent)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.3"/>
+</svg>
